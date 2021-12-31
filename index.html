@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css" />                     
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" />                     
+    <title>Flip Image</title>
+</head>  
+<body>
+    <h1 class="center">Image Flipper</h1>
+    <br>
+
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <input class="btn btn-danger" type="file" id="fileElem"/>
+            <button class="btn btn-primary" onclick="printImage()">Submit</button>
+            <button class="btn btn-warning" onclick="resetToBlank()">Reset</button>
+            <br><br>
+
+            <div class="col">
+              <button class="btn btn-success center mx-sm-3 mb-2" onclick="flipImage()">Flip the image</button>
+              <button class="btn btn-success center mx-sm-3 mb-2 disabled" onclick="flipImage()">Upside-Down</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-success center mx-sm-3 mb-2 disabled" onclick="flipImage()">Rotate 45°(left)</button>
+              <button class="btn btn-success center mx-sm-3 mb-2 disabled" onclick="flipImage()">Rotate 45°(right)</button>
+            </div>
+
+          </div>
+          
+          <div class="col" id="gridPhoto">
+            <div>
+                <img id="image" src="./images/placeholder.png" alt="placeholder"/>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+  <script src="./scripts/printAndFlip.js"></script>  
+</body>
+</html>
